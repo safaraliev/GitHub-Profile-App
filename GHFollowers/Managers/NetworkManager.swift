@@ -5,13 +5,14 @@
 //  Created by Нуридин Сафаралиев on 2/23/26.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager{
     static let shared = NetworkManager()
-    private init(){}
+    private let baseURL = "https://api.github.com/users/"
+    let cache = NSCache<NSString,UIImage>()
     
-    let baseURL = "https://api.github.com/users/"
+    private init(){}
     
     func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GFError>) -> Void) {
         
