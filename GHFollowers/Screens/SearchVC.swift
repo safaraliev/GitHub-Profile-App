@@ -85,15 +85,17 @@ class SearchVC: UIViewController {
             logoimageView.widthAnchor.constraint(equalToConstant: 200),
             logoimageView.heightAnchor.constraint(equalToConstant: 200),
             
-            usernameTextField.topAnchor.constraint(equalTo: logoimageView.bottomAnchor, constant: 48),
+//            usernameTextField.topAnchor.constraint(equalTo: logoimageView.bottomAnchor, constant: 48),
+            usernameTextField.topAnchor.constraint(equalTo: logoimageView.bottomAnchor, constant: 68),
             usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            usernameTextField.heightAnchor.constraint(equalToConstant: 50),
+            usernameTextField.heightAnchor.constraint(equalToConstant: 55),
             
-            callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+//            callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            callToActionButton.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 50),
             callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            callToActionButton.heightAnchor.constraint(equalToConstant: 50),
+            callToActionButton.heightAnchor.constraint(equalToConstant: 55),
         ])
         
     }

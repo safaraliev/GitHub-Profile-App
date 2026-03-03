@@ -22,6 +22,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
     
+    func createTabBar() -> UITabBarController {
+        let tabBar = UITabBarController()
+        tabBar.viewControllers = [createSearchNC(), createFavouritesNC()]
+        
+//        let appearance = UITabBarAppearance()
+//        appearance.configureWithOpaqueBackground()
+//        appearance.backgroundColor = .systemBackground
+        UITabBar.appearance().tintColor = .systemGreen
+//        UITabBar.appearance().standardAppearance = appearance
+//        UITabBar.appearance().scrollEdgeAppearance = appearance
+        
+        return tabBar
+    }
 
     func createSearchNC() -> UINavigationController {
         let searchVC = SearchVC()
@@ -36,21 +49,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         favouritesListVC.title = "Favourites"
         favouritesListVC.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star.fill"), tag: 1)
         return UINavigationController(rootViewController: favouritesListVC)
-    }
-    
-    
-    func createTabBar() -> UITabBarController {
-        let tabBar = UITabBarController()
-        tabBar.viewControllers = [createSearchNC(), createFavouritesNC()]
-        
-//        let appearance = UITabBarAppearance()
-//        appearance.configureWithOpaqueBackground()
-//        appearance.backgroundColor = .systemBackground
-        UITabBar.appearance().tintColor = .systemGreen
-//        UITabBar.appearance().standardAppearance = appearance
-//        UITabBar.appearance().scrollEdgeAppearance = appearance
-        
-        return tabBar
     }
     
     
