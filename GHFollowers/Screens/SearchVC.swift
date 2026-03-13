@@ -9,7 +9,6 @@ import UIKit
 
 class SearchVC: UIViewController {
 
-
     let logoimageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,8 +67,6 @@ class SearchVC: UIViewController {
         navigationController?.pushViewController(followerListVC, animated: false)
     }
     
-
-    
     
     func configureUI() {
         
@@ -77,9 +74,7 @@ class SearchVC: UIViewController {
         view.addSubview(usernameTextField)
         view.addSubview(callToActionButton)
         
-        
         NSLayoutConstraint.activate([
-            
             logoimageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
             logoimageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoimageView.widthAnchor.constraint(equalToConstant: 200),
