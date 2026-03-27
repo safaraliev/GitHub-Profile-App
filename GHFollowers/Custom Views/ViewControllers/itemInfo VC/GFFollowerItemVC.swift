@@ -14,10 +14,14 @@ class GFFollowerItemVC: GFItemInfoVC {
         configureItems()
     }
     
-    func configureItems(){
+    private func configureItems(){
         infoItemOne.set(itemInfoType: .followers, withCount: user.followers)
         infoItemTwo.set(itemInfoType: .following, withCount: user.following)
         actionButton.set(backgroundColor: .systemGreen, title: "Get Followers")
+    }
+    
+    override func actionButtonTapped() {
+        delegate.didTapFollowersButton(user: user)
     }
     
 }
